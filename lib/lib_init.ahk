@@ -7,9 +7,6 @@ initAll:
 
 IniRead, isLoadingAnimation, CapsLock+settings.ini, Global, loadingAnimation, 1
 
-if(isLoadingAnimation)
-	gosub, showLoading
-
 Suspend, On ;挂起所有热键
 gosub, language_zh_CN_Init ;字符串初始化,这个要第一个运行
 gosub, settingsInit ;初始化设置
@@ -25,9 +22,6 @@ CLq() ;初始化+q
 
 setTimer, mouseSpeedInit, -1
 Suspend, Off
-
-if(isLoadingAnimation)
-	gosub, hideLoading
 
 return
 
