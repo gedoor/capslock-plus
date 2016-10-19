@@ -1,6 +1,10 @@
 [功能说明文档](http://cjkis.me/capslock+/)
 
-觉得好用欢迎[捐赠](http://cjkis.me/payment/)
+更新:
+更改图标,更好看
+更改tip,CapsLock+
+取消管理员权限,
+隐藏启动窗口
 
 ##1.怎么运行Capslock+的源码？
 1. 下载 [AutoHotkey](http://www.ahkscript.org/)，并安装。
