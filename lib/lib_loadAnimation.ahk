@@ -42,14 +42,13 @@ Gui, Font, S12 C0x555555, Source Code Pro   ;后备字体
 Gui, Font, S12 C0x555555, Consolas
 Gui, Add, Text, HwndLoadingTextHwnd H20 W100 Center,% LoadingChar[1]
 Gui, Color, ffffff, ffffff
-Gui, LoadingGui:Show, Center NA
+;Gui, LoadingGui:Show, Center NA
 ;~ WinSet, TransColor, ffffff, ahk_id %LoadingGuiHwnd%
 WinSet, Transparent, 230, ahk_id %LoadingGuiHwnd%
 charIndex:=1
 loadingCharMaxIndex:=LoadingChar._MaxIndex()
 SetTimer, changeLoadingChar, 250, 777   ;优先级777
 return
-
 
 hideLoading:
 SetTimer, changeLoadingChar, Off
