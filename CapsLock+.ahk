@@ -1,9 +1,6 @@
-if not A_IsAdmin ;running by administrator
-{
-   Run *RunAs "%A_ScriptFullPath%" 
-   ExitApp
-}
-
+#SingleInstance force ;替换旧实例直接运行
+#Persistent ;让脚本一直运行
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 IfExist, capslock+icon.ico
 {
@@ -11,7 +8,7 @@ IfExist, capslock+icon.ico
 menu, TRAY, Icon, capslock+icon.ico, , 1
 }
 Menu, Tray, Icon,,, 1
-
+Menu, Tray, tip, CapsLock+
 
 
 global CLversion:="Version: 2.6.0.6 | 2016-7-7`n`nCopyright 2016 Chen JunKai" 
@@ -24,7 +21,7 @@ global whichClipboardNow  ;0 system clipboard; 1 capslock+ clipboard; 2 capslock
 allowRunOnClipboardChange:=true
 
 
-#Include lib
+#Include %A_ScriptDir%\lib
 #Include lib_init.ahk ;The beginning of all things
 #include lib_language.ahk
 #include lib_keysFunction.ahk
@@ -44,7 +41,7 @@ allowRunOnClipboardChange:=true
 #include lib_loadAnimation.ahk
 
 ;change dir
-#include ..\userAHK
+#include %A_ScriptDir%\userAHK
 #include *i main.ahk
 
 #MaxHotkeysPerInterval 500
