@@ -31,6 +31,7 @@ getSelText()
     Clipboard:=""
     SendInput, ^{insert}
     ClipWait, 0.1
+    ;MsgBox, %Clipboard%
     if(!ErrorLevel)
     {
         selText:=Clipboard

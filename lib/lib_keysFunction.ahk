@@ -114,6 +114,7 @@ keyFunc_delete(){
 keyFunc_translate(){
     global
     selText:=getSelText()
+    ;MsgBox, %selText%
     if(selText)
     { 
         ydTranslate(selText)
