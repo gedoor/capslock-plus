@@ -10,6 +10,13 @@ menu, TRAY, Icon, capslock+icon.ico, , 1
 Menu, Tray, Icon,,, 1
 Menu, Tray, tip, CapsLock+
 
+;启动StrokesPlus
+Process, exist, StrokesPlus.exe
+If (ErrorLevel = 0)
+	{
+		lj = D:\Program Files\strokesplus\StrokesPlus_x64_Signed
+		Run, %lj%\StrokesPlus.exe, %lj%
+	}
 
 global CLversion:="Version: 2.6.0.6 | 2016-7-7`n`nCopyright 2016 Chen JunKai" 
 
